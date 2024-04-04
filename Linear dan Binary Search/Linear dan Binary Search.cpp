@@ -1,27 +1,27 @@
 #include <iostream>
 using namespace std;
 
-int ar[20]; // Array to be searched
-int n;		// Number of elements in the array
-int i;		// Index of Arrray Element
+int arr[20]; //array to be searched
+int n; //Number of elements in the array
+int i; //index of array element 
 
 void input()
 {
-	While (true)
+	while (true)
 	{
-		cout << "Enter the number of elements in the array: ";
+		cout << "enter thr number of elemen in the aray: ";
 		cin >> n;
 		if ((n > 0) && (n <= 20))
 			break;
 		else
-			cout << "\nArray should have minimum 1 and maximum 20  element.\n\n";
+			cout << "\nArray should have minimum 1 and maximum 20 elements.\n\n";
 	}
 
-	// Accept array elements
-	cout << "\n-----------------\n";
-	cout << " Enter array elements \n";
-	cout << "----------------------\n";
-	for (i = 0; i <n;i++)
+	//Accept array elements
+	cout << "\n--------------\n";
+	cout << "enter array elements \n";
+	cout << "-----------------\n";
+	for (i = 0; i < n; i++)
 	{
 		cout << "<" << (i + 1) << ">";
 		cin >> arr[i];
@@ -31,30 +31,30 @@ void input()
 void LinearSearch()
 {
 	char ch;
-	int ctr; // Number of comparisons
+	int ctr; //Number of comparisons
 	int item;
 
 	do
 	{
-		// Accept the number of comparisons
-		char ch;
+		//Accept the number to be searched
+		cout << "\nEnter the element you want to search"; //step 1
 		cin >> item;
 
 		ctr = 0;
-		i = 0;// step 2
-		while (i < n) // step 3
+		i = 0; //step 2
+		while (i < n) //step 3
 		{
 			ctr++;
 			if (arr[i] == item)
 			{
-				Cout << "\n" << item << " found at position" << endl; //step 6
+				cout << "\n" << item << " found at position" << (i + 1) << endl;
 				break;
 			}
-			i++; // step 4
+			i++; //step 4
 		}
 
-		if (i == n) // step 5
-			cout << "\n" << item << " not found in the array\n";
+		if (i == n) //step 5
+			cout << "\n" << item << "not found in the array\n";
 		cout << "\nNumber of comparisons: " << ctr << endl;
 
 		cout << "\nContinue search (y/n): ";
@@ -67,7 +67,7 @@ void display()
 {
 	cout << "Array elements are: ";
 	for (i = 0; i < n; i++)
-		cout << arr[i] << "";
+		cout << arr[i] << " ";
 	cout << endl;
 }
 
